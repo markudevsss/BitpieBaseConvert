@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BitpieBaseConvert - HTML/CSS/JS Minifier</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f1a, #1c1c2b);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0 0 20px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #58a6ff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #58a6ff;
+    }
+
+    nav .install-btn {
+      padding: 8px 16px;
+      background: #58a6ff;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav .install-btn:hover {
+      background: #1f6feb;
+    }
+
+    /* Section Styling */
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 30px;
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #58a6ff;
+      text-align: center;
+    }
+
+    section p {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    /* Tools Section */
+    .toolbox {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 180px;
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      resize: none;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .tool-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tool-buttons button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #58a6ff;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      min-width: 120px;
+    }
+
+    .tool-buttons button:hover {
+      background: #1f6feb;
+    }
+
+    /* FAQ */
+    .faq-item {
+      margin: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: bold;
+      color: #58a6ff;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 8px;
+      color: #ddd;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 15px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">BitpieBaseConvert</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://chrome.google.com/webstore/detail/bitpiebaseconvert/mandfahjeiiepfnbeldnhigjcjnpIndn" target="_blank">
+      <button class="install-btn">Install Extension</button>
+    </a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <h2>Welcome to BitpieBaseConvert</h2>
+    <p>A simple, fast, and offline tool to <strong>minify</strong> or <strong>unminify</strong> your HTML, CSS, and JavaScript code.</p>
+  </section>
+
+  <!-- Tools -->
+  <section id="tools">
+    <h2>Try Our Tools</h2>
+    <div class="toolbox">
+      <textarea id="inputCode" placeholder="Paste your code here..."></textarea>
+      <div class="tool-buttons">
+        <button onclick="minifyCode()">Minify</button>
+        <button onclick="unminifyCode()">Unminify</button>
+        <button onclick="copyCode()">Copy</button>
+        <button onclick="clearCode()">Clear</button>
+      </div>
+      <textarea id="outputCode" placeholder="Result will appear here..."></textarea>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>Why Use BitpieBaseConvert?</h2>
+    <p>Optimizing code is essential for faster websites, better SEO, and efficient debugging. Our tool works offline, ensuring speed and privacy with no data tracking.</p>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">❓ What does BitpieBaseConvert do? <span>+</span></div>
+      <div class="faq-answer">It minifies or unminifies your HTML, CSS, and JS code instantly, offline.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">🔒 Is it safe to use? <span>+</span></div>
+      <div class="faq-answer">Yes, all code processing is done locally on your computer.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">🌐 Does it need internet? <span>+</span></div>
+      <div class="faq-answer">No, it works completely offline.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">💰 Is it free? <span>+</span></div>
+      <div class="faq-answer">Yes, it's 100% free to use.</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, reach us at:</p>
+    <p><a href="mailto:markudevsss@gmail.com" style="color:#58a6ff;">markudevsss@gmail.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 BitpieBaseConvert. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Minify code
+    function minifyCode() {
+      let input = document.getElementById("inputCode").value;
+      let minified = input.replace(/\s+/g, " ").trim();
+      document.getElementById("outputCode").value = minified;
+    }
+
+    // Unminify code (basic formatter)
+    function unminifyCode() {
+      let input = document.getElementById("inputCode").value;
+      let formatted = input.replace(/;/g, ";\n")
+                           .replace(/{/g, "{\n")
+                           .replace(/}/g, "}\n");
+      document.getElementById("outputCode").value = formatted;
+    }
+
+    // Copy output
+    function copyCode() {
+      let output = document.getElementById("outputCode");
+      output.select();
+      document.execCommand("copy");
+      alert("Code copied!");
+    }
+
+    // Clear inputs
+    function clearCode() {
+      document.getElementById("inputCode").value = "";
+      document.getElementById("outputCode").value = "";
+    }
+
+    // FAQ toggle
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        let ans = q.nextElementSibling;
+        let icon = q.querySelector("span");
+        ans.style.display = (ans.style.display === "block") ? "none" : "block";
+        icon.textContent = (ans.style.display === "block") ? "-" : "+";
+      });
+    });
+  </script>
+</body>
+</html>
