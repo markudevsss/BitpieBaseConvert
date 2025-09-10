@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — BiʈpïeBaseConvert</title>
+  <style>
+    :root{
+      --bg1: rgba(10,12,25,1);
+      --glass: rgba(255,255,255,0.06);
+      --glass-2: rgba(255,255,255,0.04);
+      --accent: linear-gradient(135deg,#7c3aed,#06b6d4);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.68);
+      --card-radius: 16px;
+      --shadow: 0 10px 30px rgba(2,6,23,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:radial-gradient(circle at 10% 10%, rgba(124,58,237,0.12), transparent 10%), radial-gradient(circle at 90% 90%, rgba(6,182,212,0.08), transparent 15%), var(--bg1);color:var(--text);}
+
+    .page {
+      min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 20px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="%237c3aed" stop-opacity="0.06" offset="0"/><stop stop-color="%2306b6d4" stop-opacity="0.04" offset="1"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>');
+      background-blend-mode: overlay;
+    }
+
+    .card{
+      width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--card-radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(255,255,255,0.04);
+      backdrop-filter: blur(10px) saturate(120%);
+      display:grid;grid-template-columns:1fr 360px;gap:1px;position:relative;
+    }
+
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;}
+    }
+
+    .left{padding:36px 40px;}
+    .right{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:28px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;justify-content:flex-start}
+
+    h1{margin:0 0 6px;font-size:20px;letter-spacing:-0.4px}
+    h2{margin:0 0 18px;font-size:14px;color:var(--muted);font-weight:600}
+
+    p{color:var(--muted);line-height:1.6}
+
+    .section{margin-bottom:20px}
+    .section h3{margin:0 0 8px;font-size:15px}
+    .features{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .pill{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px dashed rgba(255,255,255,0.03);font-size:14px;color:var(--muted)}
+    th{color:var(--text);font-weight:600}
+
+    .cta-row{display:flex;gap:10px;align-items:center}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600;box-shadow:0 6px 18px rgba(124,58,237,0.15)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);box-shadow:none}
+
+    .muted{color:var(--muted);font-size:13px}
+
+    /* right column */
+    .meta-title{font-weight:700;color:var(--text);font-size:15px}
+    .meta-desc{font-size:13px;color:var(--muted);line-height:1.5}
+
+    .contact{margin-top:auto;width:100%}
+    .contact small{display:block;color:var(--muted);margin-bottom:6px}
+    .link{color:transparent;background:linear-gradient(90deg,#7c3aed,#06b6d4);-webkit-background-clip:text;background-clip:text;font-weight:700}
+
+    footer{padding:18px 0 12px;color:var(--muted);font-size:13px;text-align:left}
+
+    /* tiny responsive tweaks */
+    @media (max-width:520px){
+      .left{padding:22px}
+      .right{padding:18px}
+    }
+
+    /* copy toast */
+    .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:28px;background:rgba(0,0,0,0.6);color:#fff;padding:10px 14px;border-radius:999px;font-weight:600;opacity:0;pointer-events:none;transition:all .28s}
+    .toast.show{opacity:1;bottom:38px;pointer-events:auto}
+
+    .logo{display:inline-block;margin-right:10px;background:linear-gradient(90deg,#7c3aed,#06b6d4);-webkit-background-clip:text;background-clip:text;font-weight:800}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <article class="card" role="article">
+      <main class="left">
+        <header style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;align-items:baseline;gap:10px">
+              <span class="logo">BiʈpïeBaseConvert</span>
+              <small class="muted">Privacy Policy</small>
+            </div>
+            <h1>Privacy Policy</h1>
+            <h2>We respect your privacy — no data collection</h2>
+          </div>
+        </header>
+
+        <section class="section">
+          <h3>Summary</h3>
+          <p>We do not collect, store, sell, or share personal data. <strong>BiʈpïeBaseConvert</strong> is a lightweight tool to minify and unminify HTML, CSS, and JavaScript code directly inside your browser popup. All code processing happens locally on your device. The only time your content leaves the popup is if you choose to copy it to your clipboard.</p>
+          <p class="muted">This policy is provided to comply with Chrome Web Store requirements when an extension declares a host permission. The section below explains why the permission is needed and how it is limited.</p>
+        </section>
+
+        <section class="section">
+          <h3>Data We Collect</h3>
+          <p><strong>None.</strong> We do not collect or transmit any personally identifiable information, browsing history, keystrokes, page content, analytics, crash reports, or advertising identifiers. All minify/unminify operations run locally inside your browser.</p>
+        </section>
+
+        <section class="section">
+          <h3>Permissions &amp; Why We Need Them</h3>
+          <table aria-describedby="permission-desc">
+            <thead>
+              <tr><th>Permission</th><th>Why it’s needed</th><th>What it does not do</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>host_permissions<br><code>https://firestore.googleapis.com/*</code></strong></td>
+                <td>Allows the extension to fetch a small read-only configuration file from our Firebase project. The file contains a simple status flag and an optional URL that tells the extension whether to show the built-in tools or open a predefined webpage.</td>
+                <td>Cannot read user data, browsing history, or third-party content. It only accesses our own Firebase project and is used purely for configuration.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="muted">We do not execute remote code. The Firebase configuration is a simple JSON object (flag/URL) — no scripts, analytics, or tracking are run.</p>
+        </section>
+
+        <section class="section">
+          <h3>Third-Party Content</h3>
+          <p>In rare cases the extension may open or embed a page from our own site: <a class="link" href="https://markudevsss.github.io/BitpieBaseConvert" target="_blank" rel="noopener">markudevsss.github.io/BitpieBaseConvert</a>. That site may have its own cookies or logs — please review that site’s policy if applicable.</p>
+        </section>
+
+        <section class="section">
+          <h3>Contact</h3>
+          <p>If you have questions or concerns, contact:</p>
+          <p>
+            <strong>MarkuDevsss</strong><br>
+            Email: <a class="link" href="mailto:markudevsss@gmail.com">markudevsss@gmail.com</a><br>
+            Website: <a class="link" href="https://markudevsss.github.io/BitpieBaseConvert" target="_blank" rel="noopener">markudevsss.github.io/BitpieBaseConvert</a>
+          </p>
+        </section>
+
+        <footer>
+          © <span id="year"></span> MarkuDevsss. All rights reserved.
+        </footer>
+      </main>
+
+      <aside class="right" aria-label="quick-actions">
+        <div>
+          <div class="meta-title">Quick Summary</div>
+          <div class="meta-desc">No data is collected. All code formatting happens locally. Firestore permission is used only for a small, read-only configuration file.</div>
+        </div>
+
+        <div class="features" style="margin-top:12px">
+          <div class="pill">Minify &amp; Unminify</div>
+          <div class="pill">Local Processing</div>
+          <div class="pill">No Tracking</div>
+          <div class="pill">Optional Remote Config</div>
+        </div>
+
+        <div style="width:100%;margin-top:10px">
+          <div class="muted">Actions</div>
+          <div class="cta-row" style="margin-top:8px">
+            <button class="btn" id="copyPolicy">Copy Policy</button>
+            <button class="btn ghost" id="downloadPolicy">Download</button>
+          </div>
+        </div>
+
+        <div class="contact">
+          <small>Contact</small>
+          <div><strong>MarkuDevsss</strong></div>
+          <div class="muted">markudevsss@gmail.com</div>
+          <div style="height:10px"></div>
+        </div>
+      </aside>
+    </article>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <script>
+    // Small JS for interactivity: copy and download
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toast = (msg) => {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(t._timer);
+      t._timer = setTimeout(()=> t.classList.remove('show'), 2400);
+    };
+
+    function getPolicyText(){
+      // Build a clean text-only version of the policy (for copy/download)
+      const left = document.querySelector('.left');
+      // Clone and strip interactive elements
+      const clone = left.cloneNode(true);
+      // remove buttons/links
+      clone.querySelectorAll('a, button').forEach(n=> n.replaceWith(n.textContent || ''));
+      // return text
+      return clone.innerText.trim();
+    }
+
+    document.getElementById('copyPolicy').addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(getPolicyText());
+        toast('Policy copied to clipboard');
+      }catch(e){
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = getPolicyText(); document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); toast('Policy copied to clipboard'); }catch(err){ toast('Copy failed'); }
+        ta.remove();
+      }
+    });
+
+    document.getElementById('downloadPolicy').addEventListener('click', ()=>{
+      const txt = getPolicyText();
+      const blob = new Blob([txt], {type:'text/plain;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'privacy_policy_BitpieBaseConvert.txt';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+      toast('Downloaded policy');
+    });
+  </script>
+</body>
+</html>
